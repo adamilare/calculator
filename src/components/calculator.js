@@ -1,42 +1,60 @@
+import { useState } from 'react';
 import CalcBtn from './calcBtn';
 import CalcDisplay from './calcDisplay';
 import '../css/calculator.css';
+import calculate from './logic.js/calculate';
 
-const Calculator = () => (
-  <section id="calculator">
-    <div className="calc-row">
-      <CalcDisplay />
-    </div>
-    <div className="calc-row">
-      <CalcBtn text="AC" />
-      <CalcBtn text="+/-" />
-      <CalcBtn text="%" />
-      <CalcBtn text="÷" />
-    </div>
-    <div className="calc-row">
-      <CalcBtn text="7" />
-      <CalcBtn text="8" />
-      <CalcBtn text="9" />
-      <CalcBtn text="x" />
-    </div>
-    <div className="calc-row">
-      <CalcBtn text="4" />
-      <CalcBtn text="5" />
-      <CalcBtn text="6" />
-      <CalcBtn text="-" />
-    </div>
-    <div className="calc-row">
-      <CalcBtn text="1" />
-      <CalcBtn text="2" />
-      <CalcBtn text="3" />
-      <CalcBtn text="+" />
-    </div>
-    <div className="calc-row">
-      <CalcBtn extraClass="col-2" text="0" />
-      <CalcBtn text="." />
-      <CalcBtn text="=" />
-    </div>
-  </section>
-);
+const Calculator = () => {
+  const [data, setData] = useState({});
+
+  const handleClick = (text) => {
+    setData(calculate(data, text));
+  };
+
+  const getDisplayText = () => {
+    if (data) {
+      if (!data.next && !data.operation) return data.total ?? '0';
+      return data.next ?? '0';
+    }
+    return '0';
+  };
+
+  return (
+    <section id="calculator">
+      <div className="calc-row">
+        <CalcDisplay text={getDisplayText()} />
+      </div>
+      <div className="calc-row">
+        <CalcBtn onClick={handleClick} text="AC" />
+        <CalcBtn onClick={handleClick} text="+/-" />
+        <CalcBtn onClick={handleClick} text="%" />
+        <CalcBtn onClick={handleClick} text="÷" />
+      </div>
+      <div className="calc-row">
+        <CalcBtn onClick={handleClick} text="7" />
+        <CalcBtn onClick={handleClick} text="8" />
+        <CalcBtn onClick={handleClick} text="9" />
+        <CalcBtn onClick={handleClick} text="x" />
+      </div>
+      <div className="calc-row">
+        <CalcBtn onClick={handleClick} text="4" />
+        <CalcBtn onClick={handleClick} text="5" />
+        <CalcBtn onClick={handleClick} text="6" />
+        <CalcBtn onClick={handleClick} text="-" />
+      </div>
+      <div className="calc-row">
+        <CalcBtn onClick={handleClick} text="1" />
+        <CalcBtn onClick={handleClick} text="2" />
+        <CalcBtn onClick={handleClick} text="3" />
+        <CalcBtn onClick={handleClick} text="+" />
+      </div>
+      <div className="calc-row">
+        <CalcBtn onClick={handleClick} extraClass="col-2" text="0" />
+        <CalcBtn onClick={handleClick} text="." />
+        <CalcBtn onClick={handleClick} text="=" />
+      </div>
+    </section>
+  );
+};
 
 export default Calculator;
