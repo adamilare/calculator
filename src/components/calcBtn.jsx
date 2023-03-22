@@ -2,10 +2,14 @@ import PropTypes from 'prop-types';
 import '../css/calculator.css';
 
 const CalcBtn = (props) => {
-  const { extraClass, text } = props;
+  const { extraClass, onClick, text } = props;
 
   return (
-    <button type="button" className={`calc-btn ${extraClass}`}>
+    <button
+      onClick={() => onClick(text)}
+      type="button"
+      className={`calc-btn ${extraClass}`}
+    >
       {text}
     </button>
   );
@@ -19,6 +23,7 @@ CalcBtn.defaultProps = {
 CalcBtn.propTypes = {
   extraClass: PropTypes.string,
   text: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default CalcBtn;
