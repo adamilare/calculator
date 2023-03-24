@@ -14,7 +14,10 @@ const Calculator = () => {
   const getDisplayText = () => {
     if (data) {
       if (!data.next && !data.operation) return data.total ?? '0';
-      return data.next ?? '0';
+      if (data.operation) {
+        return `${data.total ?? '0'} ${data.operation} ${data.next ?? ''}`;
+      }
+      return data.next ?? data.total;
     }
     return '0';
   };
