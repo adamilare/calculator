@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import getQuote from './servises/quotes.service';
+import getQuote from '../components/servises/quotes.service';
 
 const Quote = () => {
   const [quote, setQuote] = useState({});
