@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import CalcBtn from '../components/CalcBtn'; // eslint-disable-line
-import CalcDisplay from '../components/CalcDisplay'; // eslint-disable-line
+import CalcBtn from '../components/calcBtn'; // eslint-disable-line
+import CalcDisplay from '../components/calcDisplay'; // eslint-disable-line
 import calculate from '../components/logic.js/calculate';
 import '../css/calculator.css';
 
