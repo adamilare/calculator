@@ -50,7 +50,7 @@ N/A
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Here is the link to the live demo version - [Math magicians](https://adamilare.github.io/calculator/)
+- Here is the link to the live demo version - [Math magicians](https://react-calculator-7hyi.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
