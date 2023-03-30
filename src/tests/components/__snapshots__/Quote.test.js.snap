@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote page displays correctly 1`] = `
+<div
+  className="quote-grp"
+>
+  <p>
+    Loading...
+  </p>
+  <p>
+    <br />
+    <span
+      className="author"
+    />
+  </p>
+</div>
+`;
