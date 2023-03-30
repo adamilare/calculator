@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import NavBar from '../../components/NavBar';
+import NavBar from '../../components/NavBar'; // eslint-disable-line
 
 test('NavBar component matches snapshot', () => {
   const tree = renderer

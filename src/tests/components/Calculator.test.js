@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
-import Calculator from '../../routes/Calculator';
+import Calculator from '../../routes/Calculator'; // eslint-disable-line
 
 describe('Calculator', () => {
   it('renders the calculator as expected!', () => {
