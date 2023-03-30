@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import CalcBtn from '../components/CalcBtn';
-import CalcDisplay from '../components/CalcDisplay';
-import '../css/calculator.css';
+import CalcBtn from '../components/CalcBtn'; // eslint-disable-line
+import CalcDisplay from '../components/CalcDisplay'; // eslint-disable-line
 import calculate from '../components/logic.js/calculate';
+import '../css/calculator.css';
 
 const Calculator = () => {
   const [data, setData] = useState({});
