@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import Layout from '../components/Layout';
+import NavBar from '../../components/NavBar';
 
-test('Layout componet renders as expected!', () => {
+test('NavBar component matches snapshot', () => {
   const tree = renderer
     .create(
       <MemoryRouter>
-        <Layout />
+        <NavBar />
       </MemoryRouter>,
     )
     .toJSON();

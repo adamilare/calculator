@@ -1,9 +1,8 @@
-// disable eslint
 /* eslint-disable */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import axios from 'axios';
-import Quote from '../routes/Quote';
+import Quote from '../../routes/Quote';
 
 jest.mock('axios', () => ({
   get: jest.fn(() =>

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator's output component displays correctly 1`] = `
+<span
+  className="calc-btn calc-display"
+  data-testid="calc-display"
+>
+  0
+</span>
+`;
