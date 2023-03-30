@@ -9,12 +9,6 @@ import Quote from './routes/Quote';
 function App() {
   return (
     <>
-      {/* <div className="App">
-        <div className="main-grp">
-          <Quote />
-          <Calculator />
-        </div>
-      </div> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

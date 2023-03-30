@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import '../css/calculator.css';
 
 const CalcDisplay = ({ text }) => (
-  <span className="calc-btn calc-display">{text}</span>
+  <span data-testid="calc-display" className="calc-btn calc-display">
+    {text}
+  </span>
 );
 
 CalcDisplay.defaultProps = {
